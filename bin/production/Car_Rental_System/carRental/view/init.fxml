@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="carRental.controler.Init">
+   <children>
+      <Label layoutX="117.0" layoutY="69.0" prefHeight="160.0" prefWidth="393.0" text="汽车租赁系统欢迎您" textAlignment="CENTER" textFill="#343030">
+         <font>
+            <Font size="42.0" />
+         </font>
+      </Label>
+      <Button fx:id="btn_init_go" layoutX="386.0" layoutY="258.0" mnemonicParsing="false" onAction="#on_btn_init_go" prefHeight="40.0" prefWidth="57.0" text="继续" />
+      <Button fx:id="btn_init_exit" layoutX="165.0" layoutY="258.0" mnemonicParsing="false" onAction="#on_btn_init_exit" prefHeight="40.0" prefWidth="66.0" text="退出" />
+   </children>
+</AnchorPane>

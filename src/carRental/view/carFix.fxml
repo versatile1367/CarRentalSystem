@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<SplitPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="carRental.controler.CarFix">
+    <items>
+        <SplitPane dividerPositions="0.228643216080402" orientation="VERTICAL" prefHeight="200.0" prefWidth="160.0">
+            <items>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+                    <children>
+                        <Label layoutX="202.0" layoutY="20.0" prefHeight="48.0" prefWidth="194.0" text="车辆信息修改">
+                            <font>
+                                <Font size="30.0" />
+                            </font>
+                        </Label>
+                  <Button layoutX="544.0" layoutY="33.0" mnemonicParsing="false" text="返回" />
+                    </children>
+                </AnchorPane>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+                    <children>
+                        <TextField layoutX="233.0" layoutY="32.0" prefHeight="23.0" prefWidth="194.0" />
+                        <TextField layoutX="233.0" layoutY="141.0" prefHeight="23.0" prefWidth="194.0" />
+                        <Label layoutX="159.0" layoutY="32.0" prefHeight="23.0" prefWidth="48.0" text="车辆ID" />
+                        <Label layoutX="159.0" layoutY="85.0" prefHeight="23.0" prefWidth="56.0" text="修改选项" />
+                        <Label layoutX="159.0" layoutY="141.0" prefHeight="23.0" prefWidth="56.0" text="修改内容" />
+                        <ComboBox layoutX="233.0" layoutY="85.0" prefHeight="23.0" prefWidth="194.0" />
+                        <Button layoutX="275.0" layoutY="219.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="48.0" text="确定" />
+                    </children>
+                </AnchorPane>
+            </items>
+        </SplitPane>
+    </items>
+</SplitPane>

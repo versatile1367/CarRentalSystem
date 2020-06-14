@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<SplitPane dividerPositions="0.22613065326633167" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" orientation="VERTICAL" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="carRental.controler.Login">
+  <items>
+    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+         <children>
+            <Label layoutX="248.0" layoutY="13.0" prefHeight="61.0" prefWidth="167.0" text="登  录" textAlignment="RIGHT">
+               <font>
+                  <Font size="39.0" />
+               </font>
+            </Label>
+         </children></AnchorPane>
+    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+         <children>
+            <ComboBox fx:id="combo_type" layoutX="190.0" layoutY="36.0" prefHeight="32.0" prefWidth="293.0" />
+            <TextField fx:id="text_account" layoutX="190.0" layoutY="97.0" prefHeight="32.0" prefWidth="293.0" />
+            <TextField fx:id="text_pass" layoutX="190.0" layoutY="153.0" prefHeight="32.0" prefWidth="293.0" />
+            <Button fx:id="btn_logout" layoutX="381.0" layoutY="231.0" mnemonicParsing="false" onAction="#on_btn_logout" prefHeight="32.0" prefWidth="50.0" text="注销" />
+            <Button fx:id="btn_login" layoutX="222.0" layoutY="231.0" mnemonicParsing="false" onAction="#on_btn_login" prefHeight="32.0" prefWidth="50.0" text="登录" />
+            <Label layoutX="102.0" layoutY="36.0" prefHeight="32.0" prefWidth="69.0" text="登陆类型">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="102.0" layoutY="97.0" prefHeight="32.0" prefWidth="69.0" text="用户名">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="102.0" layoutY="153.0" prefHeight="32.0" prefWidth="69.0" text="密码">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+         </children></AnchorPane>
+  </items>
+</SplitPane>

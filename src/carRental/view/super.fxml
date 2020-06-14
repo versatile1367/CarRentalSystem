@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<SplitPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="carRental.controler.Super">
+   <items>
+      <SplitPane dividerPositions="0.1934673366834171" orientation="VERTICAL" prefHeight="200.0" prefWidth="160.0">
+        <items>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+               <children>
+                  <Label layoutX="224.0" layoutY="15.0" prefHeight="45.0" prefWidth="151.0" text="管理员界面">
+                     <font>
+                        <Font size="30.0" />
+                     </font>
+                  </Label>
+                  <Button layoutX="532.0" layoutY="26.0" mnemonicParsing="false" text="返回" />
+               </children>
+            </AnchorPane>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+               <children>
+                  <TabPane prefHeight="318.0" prefWidth="598.0" tabClosingPolicy="UNAVAILABLE">
+                    <tabs>
+                      <Tab text="员工信息操作">
+                        <content>
+                          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                 <children>
+                                    <TableView prefHeight="217.0" prefWidth="600.0">
+                                      <columns>
+                                        <TableColumn prefWidth="86.0" text="员工ID" />
+                                        <TableColumn prefWidth="119.0" text="员工姓名" />
+                                          <TableColumn prefWidth="106.0" text="职称等级" />
+                                          <TableColumn prefWidth="108.0" text="密码" />
+                                          <TableColumn prefWidth="180.0" text="最后登录时间" />
+                                      </columns>
+                                    </TableView>
+                                    <TextField layoutY="217.0" prefHeight="23.0" prefWidth="87.0" />
+                                    <TextField layoutX="87.0" layoutY="217.0" prefHeight="23.0" prefWidth="120.0" />
+                                    <TextField layoutX="207.0" layoutY="217.0" prefHeight="23.0" prefWidth="107.0" />
+                                    <TextField layoutX="314.0" layoutY="217.0" prefHeight="23.0" prefWidth="110.0" />
+                                    <TextField layoutX="424.0" layoutY="217.0" prefHeight="23.0" prefWidth="176.0" />
+                                    <Button layoutX="280.0" layoutY="252.0" mnemonicParsing="false" text="添加" />
+                                    <Button layoutX="424.0" layoutY="252.0" mnemonicParsing="false" text="删除" />
+                                    <Button layoutX="147.0" layoutY="252.0" mnemonicParsing="false" text="修改" />
+                                 </children>
+                              </AnchorPane>
+                        </content>
+                      </Tab>
+                      <Tab text="财务报表">
+                        <content>
+                          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                 <children>
+                                    <TabPane layoutY="-5.0" prefHeight="295.0" prefWidth="598.0" tabClosingPolicy="UNAVAILABLE">
+                                      <tabs>
+                                        <Tab text="年度">
+                                          <content>
+                                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="277.0" prefWidth="598.0">
+                                                   <children>
+                                                      <SplitPane dividerPositions="0.24328859060402686" layoutX="1.0" layoutY="-2.0" prefHeight="269.0" prefWidth="598.0">
+                                                        <items>
+                                                          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                                                               <children>
+                                                                  <TableView layoutX="-2.0" prefHeight="266.0" prefWidth="151.0">
+                                                                    <columns>
+                                                                      <TableColumn prefWidth="57.0" text="年份" />
+                                                                        <TableColumn prefWidth="88.0" text="利润" />
+                                                                    </columns>
+                                                                  </TableView>
+                                                               </children></AnchorPane>
+                                                          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="267.0" prefWidth="455.0">
+                                                               <children>
+                                                                  <SplitPane dividerPositions="0.48541666666666666" layoutX="-1.0" prefHeight="268.0" prefWidth="450.0">
+                                                                    <items>
+                                                                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="266.0" prefWidth="239.0" />
+                                                                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0" />
+                                                                    </items>
+                                                                  </SplitPane>
+                                                               </children></AnchorPane>
+                                                        </items>
+                                                      </SplitPane>
+                                                   </children>
+                                                </AnchorPane>
+                                          </content>
+                                        </Tab>
+                                        <Tab text="季度">
+                                          <content>
+                                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                                   <children>
+                                                      <SplitPane dividerPositions="0.1939799331103679" prefHeight="270.0" prefWidth="600.0">
+                                                        <items>
+                                                          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0" />
+                                                          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                                                               <children>
+                                                                  <SplitPane dividerPositions="0.48739495798319327" prefHeight="268.0" prefWidth="478.0">
+                                                                    <items>
+                                                                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0" />
+                                                                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0" />
+                                                                    </items>
+                                                                  </SplitPane>
+                                                               </children></AnchorPane>
+                                                        </items>
+                                                      </SplitPane>
+                                                   </children>
+                                                </AnchorPane>
+                                          </content>
+                                        </Tab>
+                                          <Tab text="月度">
+                                              <content>
+                                                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                                      <children>
+                                                          <SplitPane dividerPositions="0.19230769230769232" prefHeight="270.0" prefWidth="600.0">
+                                                              <items>
+                                                                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0" />
+                                                                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                                                               <children>
+                                                                  <SplitPane dividerPositions="0.497907949790795" prefHeight="266.0" prefWidth="480.0">
+                                                                    <items>
+                                                                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0" />
+                                                                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0" />
+                                                                    </items>
+                                                                  </SplitPane>
+                                                               </children></AnchorPane>
+                                                              </items>
+                                                          </SplitPane>
+                                                      </children>
+                                                  </AnchorPane>
+                                              </content>
+                                          </Tab>
+                                      </tabs>
+                                    </TabPane>
+                                 </children></AnchorPane>
+                        </content>
+                      </Tab>
+                        <Tab text="车辆统计报表">
+                            <content>
+                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                            </content>
+                        </Tab>
+                    </tabs>
+                  </TabPane>
+               </children>
+            </AnchorPane>
+        </items>
+      </SplitPane>
+   </items>
+</SplitPane>
