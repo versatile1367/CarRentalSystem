@@ -1,14 +1,159 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
 
-<SplitPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="carRental.controler.Stuff"
-            prefHeight="400.0" prefWidth="600.0">
-
-</SplitPane>
+<SplitPane dividerPositions="0.20603015075376885" orientation="VERTICAL" prefHeight="400.0" prefWidth="600.0" stylesheets="@stuff.css" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="carRental.controler.Stuff">
+        <items>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+               <children>
+                  <Label layoutX="243.0" layoutY="19.0" prefHeight="41.0" prefWidth="112.0" text="员工界面">
+                     <font>
+                        <Font size="25.0" />
+                     </font></Label>
+                  <Button fx:id="btn_logout" layoutX="521.0" layoutY="14.0" mnemonicParsing="false" onAction="#no_btn_logout" text="注销" />
+                  <Button fx:id="btn_super" layoutX="521.0" layoutY="49.0" mnemonicParsing="false" onAction="#on_btn_super" text="管理员点击" />
+               </children>
+            </AnchorPane>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+               <children>
+                  <TabPane prefHeight="313.0" prefWidth="598.0" tabClosingPolicy="UNAVAILABLE">
+                    <tabs>
+                      <Tab fx:id="tab_showDiary" onSelectionChanged="#show_diary" text="交易记录">
+                        <content>
+                          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                 <children>
+                                    <AnchorPane layoutX="-1.0" layoutY="-1.0" prefHeight="288.0" prefWidth="600.0">
+                                       <children>
+                                          <TableView fx:id="table_diary" layoutX="-2.0" prefHeight="216.0" prefWidth="600.0">
+                                            <columns>
+                                              <TableColumn fx:id="col_dId" prefWidth="68.0" text="流水ID" />
+                                              <TableColumn fx:id="col_dCarId" prefWidth="69.0" text="车辆ID" />
+                                                <TableColumn fx:id="col_dCusId" prefWidth="78.0" text="用户ID" />
+                                                <TableColumn fx:id="col_dStuffId" prefWidth="86.0" text="经手人ID" />
+                                                <TableColumn fx:id="col_dTime" prefWidth="131.0" text="交易时间" />
+                                                <TableColumn fx:id="col_dEvent" prefWidth="90.0" text="事件" />
+                                                <TableColumn fx:id="col_dCost" prefWidth="77.0" text="金额" />
+                                            </columns>
+                                          </TableView>
+                                          <Button fx:id="btn_dAdd" layoutX="171.0" layoutY="251.0" mnemonicParsing="false" onAction="#on_btn_dAdd" text="添加" />
+                                          <Button fx:id="btn_dDelete" layoutX="368.0" layoutY="251.0" mnemonicParsing="false" onAction="#on_btn_dDelete" text="删除" />
+                                          <TextField fx:id="add_dId" layoutY="216.0" prefHeight="23.0" prefWidth="66.0" />
+                                          <TextField fx:id="add_dCarId" layoutX="66.0" layoutY="216.0" prefHeight="23.0" prefWidth="76.0" />
+                                          <TextField fx:id="add_dCusId" layoutX="142.0" layoutY="216.0" prefHeight="23.0" prefWidth="76.0" />
+                                          <TextField fx:id="add_dStuffId" layoutX="218.0" layoutY="216.0" prefHeight="23.0" prefWidth="84.0" />
+                                          <TextField fx:id="add_dTime" layoutX="300.0" layoutY="216.0" prefHeight="23.0" prefWidth="127.0" />
+                                          <TextField fx:id="add_dEvent" layoutX="427.0" layoutY="216.0" prefHeight="23.0" prefWidth="93.0" />
+                                          <TextField fx:id="add_dCost" layoutX="520.0" layoutY="216.0" prefHeight="23.0" prefWidth="76.0" />
+                                       </children></AnchorPane>
+                                 </children>
+                              </AnchorPane>
+                        </content>
+                      </Tab>
+                      <Tab fx:id="tab_showCar" onSelectionChanged="#show_car" text="车辆信息记录">
+                        <content>
+                          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                 <children>
+                                    <AnchorPane layoutX="-14.0" layoutY="-2.0" prefHeight="288.0" prefWidth="600.0">
+                                       <children>
+                                          <TableView fx:id="table_car" layoutX="13.0" layoutY="-2.0" prefHeight="224.0" prefWidth="592.0">
+                                            <columns>
+                                              <TableColumn fx:id="col_cId" prefWidth="47.99998474121094" text="ID" />
+                                              <TableColumn fx:id="col_cBrand" prefWidth="73.0" text="汽车品牌" />
+                                                <TableColumn fx:id="col_cCid" prefWidth="79.0" text="汽车牌号" />
+                                                <TableColumn fx:id="col_cStatus" prefWidth="67.0" text="汽车状态" />
+                                                <TableColumn fx:id="col_cRent" prefWidth="71.0" text="租金" />
+                                                <TableColumn fx:id="col_cPledge" prefWidth="62.0" text="押金" />
+                                                <TableColumn fx:id="col_cValid" prefWidth="67.0" text="租用中" />
+                                                <TableColumn fx:id="col_cTime" prefWidth="148.0" text="最后修改时间" />
+                                            </columns>
+                                          </TableView>
+                                          <Button fx:id="btn_cAdd" layoutX="150.0" layoutY="252.0" mnemonicParsing="false" onAction="#on_btn_cAdd" text="添加" />
+                                          <Button fx:id="btn_cFix" layoutX="282.0" layoutY="252.0" mnemonicParsing="false" onAction="#on_btn_cFix" text="修改" />
+                                          <Button fx:id="btn_cDelete" layoutX="416.0" layoutY="252.0" mnemonicParsing="false" onAction="#on_btn_cDelete" text="删除" />
+                                          <TextField fx:id="add_cId" layoutX="14.0" layoutY="222.0" prefHeight="23.0" prefWidth="40.0" />
+                                          <TextField fx:id="add_cBrand" layoutX="54.0" layoutY="222.0" prefHeight="23.0" prefWidth="76.0" />
+                                          <TextField fx:id="add_cCid" layoutX="130.0" layoutY="222.0" prefHeight="23.0" prefWidth="76.0" />
+                                          <TextField fx:id="add_cStatus" layoutX="202.0" layoutY="222.0" prefHeight="23.0" prefWidth="66.0" />
+                                          <TextField fx:id="add_cRent" layoutX="268.0" layoutY="222.0" prefHeight="23.0" prefWidth="82.0" />
+                                          <TextField fx:id="add_cPledge" layoutX="350.0" layoutY="222.0" prefHeight="23.0" prefWidth="60.0" />
+                                          <TextField fx:id="add_cValid" layoutX="410.0" layoutY="222.0" prefHeight="23.0" prefWidth="60.0" />
+                                          <TextField fx:id="add_cTime" layoutX="470.0" layoutY="222.0" prefHeight="23.0" prefWidth="133.0" />
+                                       </children></AnchorPane>
+                                 </children>
+                              </AnchorPane>
+                        </content>
+                      </Tab>
+                        <Tab fx:id="tab_showMemer" onSelectionChanged="#show_member" text="会员信息记录">
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                <children>
+                                    <AnchorPane layoutX="-2.0" layoutY="-1.0" prefHeight="288.0" prefWidth="600.0">
+                                    <children>
+                                       <TableView fx:id="table_member" prefHeight="225.0" prefWidth="600.0">
+                                         <columns>
+                                           <TableColumn fx:id="col_cusId" prefWidth="76.0" text="用户ID" />
+                                           <TableColumn fx:id="col_cusName" prefWidth="110.0" text="用户姓名" />
+                                             <TableColumn fx:id="col_cusPwd" prefWidth="119.0" text="用户密码" />
+                                             <TableColumn fx:id="col_cusLevel" prefWidth="124.0" text="信誉评级" />
+                                             <TableColumn fx:id="col_cusTime" prefWidth="170.0" text="最后登陆时间" />
+                                         </columns>
+                                       </TableView>
+                                       <Button fx:id="btn_cusAdd" layoutX="182.0" layoutY="251.0" mnemonicParsing="false" onAction="#on_btn_cusAdd" text="添加" />
+                                       <Button fx:id="btn_cusDelete" layoutX="365.0" layoutY="251.0" mnemonicParsing="false" onAction="#on_btn_cusDelete" text="删除" />
+                                       <TextField fx:id="add_cusId" layoutY="225.0" prefHeight="23.0" prefWidth="76.0" />
+                                       <TextField fx:id="add_cusName" layoutX="76.0" layoutY="225.0" prefHeight="23.0" prefWidth="106.0" />
+                                       <TextField fx:id="add_cusPwd" layoutX="182.0" layoutY="225.0" prefHeight="23.0" prefWidth="122.0" />
+                                       <TextField fx:id="add_cusLevel" layoutX="305.0" layoutY="225.0" prefHeight="23.0" prefWidth="123.0" />
+                                       <TextField fx:id="add_cusTime" layoutX="428.0" layoutY="225.0" prefHeight="23.0" prefWidth="172.0" />
+                                    </children></AnchorPane>
+                                </children>
+                            </AnchorPane>
+                        </Tab>
+                        <Tab fx:id="tab_showNoMember" onSelectionChanged="#show_no_member" text="非会员信息记录">
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                <children>
+                                    <AnchorPane layoutX="-2.0" layoutY="-1.0" prefHeight="288.0" prefWidth="600.0">
+                                    <children>
+                                       <TableView fx:id="table_nmember" prefHeight="216.0" prefWidth="600.0">
+                                         <columns>
+                                           <TableColumn fx:id="col_ncusId" prefWidth="75.0" text="用户ID" />
+                                           <TableColumn fx:id="col_ncusName" prefWidth="85.0" text="用户姓名" />
+                                             <TableColumn fx:id="col_ncusPwd" prefWidth="129.0" text="用户密码" />
+                                             <TableColumn fx:id="col_ncusLevel" prefWidth="146.0" text="信誉评级" />
+                                             <TableColumn fx:id="col_ncusTime" prefWidth="163.0" text="最后登录时间" />
+                                         </columns>
+                                       </TableView>
+                                       <Button fx:id="btn_ncusAdd" layoutX="174.0" layoutY="245.0" mnemonicParsing="false" onAction="#on_btn_ncusAdd" text="添加" />
+                                       <Button fx:id="btn_ncusDelete" layoutX="374.0" layoutY="245.0" mnemonicParsing="false" onAction="#on_btn_ncusDelete" text="删除" />
+                                       <TextField fx:id="add_ncusId" layoutY="216.0" prefHeight="23.0" prefWidth="76.0" />
+                                       <TextField fx:id="add_ncusName" layoutX="76.0" layoutY="216.0" prefHeight="23.0" prefWidth="83.0" />
+                                       <TextField fx:id="add_ncusPwd" layoutX="159.0" layoutY="216.0" prefHeight="23.0" prefWidth="132.0" />
+                                       <TextField fx:id="add_ncusLevel" layoutX="291.0" layoutY="216.0" prefHeight="23.0" prefWidth="142.0" />
+                                       <TextField fx:id="add_ncusTime" layoutX="433.0" layoutY="216.0" />
+                                    </children></AnchorPane>
+                                </children>
+                            </AnchorPane>
+                        </Tab>
+                        <Tab fx:id="tab_showStuff" onSelectionChanged="#show_stuff" text="员工信息记录查询">
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                <children>
+                                    <AnchorPane layoutX="-2.0" layoutY="-1.0" prefHeight="288.0" prefWidth="600.0">
+                                    <children>
+                                       <TableView fx:id="table_stuff" prefHeight="286.0" prefWidth="600.0">
+                                         <columns>
+                                           <TableColumn fx:id="col_sId" prefWidth="107.0" text="员工ID" />
+                                           <TableColumn fx:id="col_sName" prefWidth="134.0" text="员工姓名" />
+                                             <TableColumn fx:id="col_sLevel" prefWidth="130.0" text="职称等级" />
+                                             <TableColumn fx:id="col_sTime" prefWidth="228.0" text="最后登录时间" />
+                                         </columns>
+                                       </TableView>
+                                    </children></AnchorPane>
+                                </children>
+                            </AnchorPane>
+                        </Tab>
+                    </tabs>
+                  </TabPane>
+               </children></AnchorPane>
+        </items>
+      </SplitPane>

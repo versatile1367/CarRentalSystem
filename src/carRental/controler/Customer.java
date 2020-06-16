@@ -68,6 +68,8 @@ public class Customer implements Initializable {
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
+        System.out.println(Current.getB());
+        System.out.println(Current.getA());
         Connection conn1=Customer.getConnection();
         list_brand=new Vector<>();
         list_id=new Vector<>();
@@ -370,7 +372,7 @@ public class Customer implements Initializable {
 
     @FXML
     public void on_btn_myInfo(ActionEvent actionEvent) {
-
+        MainApp.setSelfCenterUi();
     }
 
     @FXML

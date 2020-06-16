@@ -5,33 +5,29 @@
 <?import javafx.scene.shape.*?>
 <?import javafx.scene.text.*?>
 
-<SplitPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="carRental.controler.Customer">
-   <items>
-      <SplitPane dividerPositions="0.21105527638190955" orientation="VERTICAL" prefHeight="200.0" prefWidth="160.0">
+<SplitPane dividerPositions="0.21105527638190955" orientation="VERTICAL" prefHeight="400.0" prefWidth="600.0" stylesheets="@customer.css" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="carRental.controler.Customer">
         <items>
-          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0" stylesheets="@customer.css">
                <children>
                   <Label layoutX="240.0" layoutY="16.0" prefHeight="51.0" prefWidth="119.0" text="顾客界面">
                      <font>
                         <Font size="27.0" />
                      </font>
                   </Label>
-                  <Label layoutX="390.0" layoutY="44.0" prefHeight="23.0" prefWidth="70.0" text="当前用户：" />
                   <Button fx:id="btn_myInfo" layoutX="529.0" layoutY="44.0" mnemonicParsing="false" onAction="#on_btn_myInfo" text="个人中心" />
                   <Button fx:id="btn_logout" layoutX="529.0" layoutY="14.0" mnemonicParsing="false" onAction="#on_btn_logout" prefHeight="23.0" prefWidth="64.0" text="注销" />
-                  <Label fx:id="label_cur" layoutX="443.0" layoutY="44.0" prefHeight="23.0" prefWidth="70.0" />
                </children></AnchorPane>
-          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0" stylesheets="@customer.css">
                <children>
-                  <TabPane prefHeight="311.0" prefWidth="598.0" tabClosingPolicy="UNAVAILABLE">
+                  <TabPane prefHeight="311.0" prefWidth="598.0" stylesheets="@customer.css" tabClosingPolicy="UNAVAILABLE">
                     <tabs>
                       <Tab text="租车">
                         <content>
-                          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" stylesheets="@customer.css">
                                  <children>
-                                    <SplitPane dividerPositions="0.4914965986394558" layoutX="-2.0" prefHeight="210.0" prefWidth="600.0">
+                                    <SplitPane dividerPositions="0.5016722408026756" layoutX="-2.0" prefHeight="210.0" prefWidth="600.0" stylesheets="@customer.css">
                                       <items>
-                                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="280.0" prefWidth="273.0">
+                                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="280.0" prefWidth="273.0" stylesheets="@customer.css">
                                              <children>
                                                 <ComboBox fx:id="combo_brand" layoutX="97.0" layoutY="31.0" prefWidth="150.0" />
                                                 <ComboBox fx:id="combo_id" layoutX="97.0" layoutY="83.0" prefWidth="150.0" />
@@ -53,7 +49,7 @@
                                                 </Label>
                                              </children>
                                           </AnchorPane>
-                                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="280.0" prefWidth="271.0">
+                                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="280.0" prefWidth="271.0" stylesheets="@customer.css">
                                              <children>
                                                 <Label layoutX="31.0" layoutY="32.0" prefHeight="23.0" prefWidth="46.0" text="租金：">
                                                    <font>
@@ -99,7 +95,7 @@
                       </Tab>
                       <Tab fx:id="tab_return" onSelectionChanged="#returnCar" text="还车">
                         <content>
-                          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" stylesheets="@customer.css">
                                  <children>
                                     <TableView fx:id="table_forReturnCar" prefHeight="208.0" prefWidth="600.0">
                                       <columns>
@@ -119,5 +115,3 @@
                </children></AnchorPane>
         </items>
       </SplitPane>
-   </items>
-</SplitPane>
